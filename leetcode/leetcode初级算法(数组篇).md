@@ -1,7 +1,5 @@
 ##  [leetcode初级算法(数组篇)](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/)
 
-[TOC]
-
 注：**点标题可以查看对应的题目**，本文代码均使用`Javascript`编写。本文代码不一定是最优解，仅供参考，如仁兄有更好的实现，欢迎交流。
 
 
