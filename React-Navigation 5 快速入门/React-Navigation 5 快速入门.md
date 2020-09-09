@@ -69,7 +69,7 @@ const MyTheme = {
 
 新版本React Navigation使用Typescript重写，提供了自动补全和类型检查功能。
 
-![typescript](.\typescript.gif)
+![typescript](./typescript.gif)
 
 [类型描述](https://reactnavigation.org/docs/typescript/)
 
