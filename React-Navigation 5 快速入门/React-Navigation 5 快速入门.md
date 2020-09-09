@@ -77,17 +77,17 @@ const MyTheme = {
 
 不需要额外配置，也不需要集成Redux到app中即可使用。
 
-![redux-devtools](.\redux-devtools.gif)
+![redux-devtools](./redux-devtools.gif)
 
 ##### 原生栈导航器
 
 一般来说，我们使用JavaScript编写导航器以获取更好的定制性，这是适用于大多数使用场景，但是如果你想要完全原生的交互体验，可以使用[`react-native-screens`](https://github.com/kmagiera/react-native-screens)库，其内部是使用原生组件实现的。
 
-<img src=".\android-native-stack.gif" style="zoom:50%;" title="android" /><img src=".\ios-native-stack.gif" style="zoom:56%;" title="ios" />
+<img src="./android-native-stack.gif" style="zoom:50%;" title="android" /><img src="./ios-native-stack.gif" style="zoom:56%;" title="ios" />
 
 ##### 原生Material头部导航器
 
-![image-20200813102331834](.\material-top-bar.png)
+![image-20200813102331834](./material-top-bar.png)
 
 使用：
 
@@ -121,7 +121,7 @@ import { ScrollPager } from 'react-native-tab-view';
 
 也称为导航头，导航栏，导航条，可能还有很多其他东西。这是屏幕顶部的矩形，它包含屏幕的back按钮和标题。在React导航中，顶上的矩形区域通常称为头部。
 
-![Header](.\Header.png)
+![Header](./Header.png)
 
 ### NavigationContainer
 
@@ -556,7 +556,7 @@ navigation.navigate('Home', {
 
 标签导航器。
 
-![tabs-badges](.\tabs-badges.png)
+![tabs-badges](./tabs-badges.png)
 
 1. 安装
 
@@ -614,7 +614,7 @@ navigation.navigate('Home', {
 
 抽屉效果导航器。
 
-![drawer_navigation](.\drawer.gif)
+![drawer_navigation](./drawer.gif)
 
 1. 安装
 
