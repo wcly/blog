@@ -1,15 +1,49 @@
-# [React-Navigation 5 快速入门](https://reactnavigation.org/docs/getting-started)
+<!-- TOC -->
 
-- 什么是`react-navigation`?
-- 安装与使用
-- `react-navigation`的基本功能
-  - 基础组件
-  - 页面跳转
-  - 路由传参
-- Hooks
-- 常见案例
+- [React-Navigation 5简介](#react-navigation-5简介)
+    - [优点](#优点)
+    - [版本变更](#版本变更)
+        - [主要变更内容](#主要变更内容)
+            - [基于组件的配置](#基于组件的配置)
+            - [新的hook](#新的hook)
+            - [新的主题API](#新的主题api)
+            - [支持Typescript](#支持typescript)
+            - [Redux DevTools 集成](#redux-devtools-集成)
+            - [原生栈导航器](#原生栈导航器)
+            - [原生Material头部导航器](#原生material头部导航器)
+- [术语表](#术语表)
+    - [Header](#header)
+    - [NavigationContainer](#navigationcontainer)
+    - [Screen](#screen)
+    - [Navigator](#navigator)
+    - [Screen component](#screen-component)
+    - [Navigation Prop](#navigation-prop)
+    - [Route prop](#route-prop)
+    - [Navigation State](#navigation-state)
+    - [Route](#route)
+- [安装使用](#安装使用)
+- [基础案例展示](#基础案例展示)
+    - [Stack navigator](#stack-navigator)
+    - [Tab navigation](#tab-navigation)
+    - [Drawer navigation](#drawer-navigation)
+- [导航器声明周期](#导航器声明周期)
+    - [案例](#案例)
+    - [事件](#事件)
+- [常用Hooks介绍](#常用hooks介绍)
+    - [useNavigation](#usenavigation)
+    - [useRoute](#useroute)
+    - [useNavigationState](#usenavigationstate)
+    - [useFocusEffect](#usefocuseffect)
+    - [useIsFocused](#useisfocused)
+    - [useScrollToTop](#usescrolltotop)
+    - [useIsDrawerOpen](#useisdraweropen)
+    - [useSafeAreaInsets](#usesafeareainsets)
+- [开发者工具](#开发者工具)
+- [其它未涉及内容](#其它未涉及内容)
 
+<!-- /TOC -->
 
+**[官网地址](https://reactnavigation.org/docs/getting-started)**
 
 ## React-Navigation 5简介
 
@@ -69,7 +103,7 @@ const MyTheme = {
 
 新版本React Navigation使用Typescript重写，提供了自动补全和类型检查功能。
 
-![typescript](./typescript.gif)
+![typescript](./images/typescript.gif)
 
 [类型描述](https://reactnavigation.org/docs/typescript/)
 
@@ -77,17 +111,17 @@ const MyTheme = {
 
 不需要额外配置，也不需要集成Redux到app中即可使用。
 
-![redux-devtools](./redux-devtools.gif)
+![redux-devtools](./images/redux-devtools.gif)
 
 ##### 原生栈导航器
 
 一般来说，我们使用JavaScript编写导航器以获取更好的定制性，这是适用于大多数使用场景，但是如果你想要完全原生的交互体验，可以使用[`react-native-screens`](https://github.com/kmagiera/react-native-screens)库，其内部是使用原生组件实现的。
 
-<img src="./android-native-stack.gif" style="zoom:50%;" title="android" /><img src="./ios-native-stack.gif" style="zoom:56%;" title="ios" />
+<img src="./images/android-native-stack.gif" style="zoom:50%;" title="android" /><img src="./images/ios-native-stack.gif" style="zoom:56%;" title="ios" />
 
 ##### 原生Material头部导航器
 
-![image-20200813102331834](./material-top-bar.png)
+![image-20200813102331834](./images/material-top-bar.png)
 
 使用：
 
@@ -121,7 +155,7 @@ import { ScrollPager } from 'react-native-tab-view';
 
 也称为导航头，导航栏，导航条，可能还有很多其他东西。这是屏幕顶部的矩形，它包含屏幕的back按钮和标题。在React导航中，顶上的矩形区域通常称为头部。
 
-![Header](./Header.png)
+![Header](./images/Header.png)
 
 ### NavigationContainer
 
@@ -556,7 +590,7 @@ navigation.navigate('Home', {
 
 标签导航器。
 
-![tabs-badges](./tabs-badges.png)
+![tabs-badges](./images/tabs-badges.png)
 
 1. 安装
 
@@ -614,7 +648,7 @@ navigation.navigate('Home', {
 
 抽屉效果导航器。
 
-![drawer_navigation](./drawer.gif)
+![drawer_navigation](./images/drawer.gif)
 
 1. 安装
 
