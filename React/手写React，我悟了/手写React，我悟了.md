@@ -1,19 +1,15 @@
-<!-- TOC -->
-
 - [文章内容](#文章内容)
 - [初始化项目](#初始化项目)
-- [[step0: 准备工作](https://github.com/wcly/my-react2/tree/main)](#step0-准备工作httpsgithubcomwclymy-react2treemain)
-- [[step1: 实现`createElement`函数](https://github.com/wcly/my-react2/tree/step1)](#step1-实现createelement函数httpsgithubcomwclymy-react2treestep1)
-- [[step2: 实现`render`函数](https://github.com/wcly/my-react2/tree/step2)](#step2-实现render函数httpsgithubcomwclymy-react2treestep2)
-- [[step3: 并发模式](https://github.com/wcly/my-react2/tree/step3)](#step3-并发模式httpsgithubcomwclymy-react2treestep3)
-- [[step4: 加入Fibers](https://github.com/wcly/my-react2/tree/step4)](#step4-加入fibershttpsgithubcomwclymy-react2treestep4)
-- [[step5: 渲染和提交](https://github.com/wcly/my-react2/tree/step5)](#step5-渲染和提交httpsgithubcomwclymy-react2treestep5)
-- [[step6: 加入协调算法](https://github.com/wcly/my-react2/tree/step6)](#step6-加入协调算法httpsgithubcomwclymy-react2treestep6)
-- [[step7: 加入函数组件渲染支持](https://github.com/wcly/my-react2/tree/step7)](#step7-加入函数组件渲染支持httpsgithubcomwclymy-react2treestep7)
-- [[step8: 实现`useState`hook](https://github.com/wcly/my-react2/tree/step8)](#step8-实现usestatehookhttpsgithubcomwclymy-react2treestep8)
+- [step0: 准备工作](#step0-准备工作)
+- [step1: 实现`createElement`函数](#step1-实现createelement函数)
+- [step2: 实现`render`函数](#step2-实现render函数)
+- [step3: 并发模式](#step3-并发模式)
+- [step4: 加入Fibers](#step4-加入fibers)
+- [step5: 渲染和提交](#step5-渲染和提交)
+- [step6: 加入协调算法](#step6-加入协调算法)
+- [step7: 加入函数组件渲染支持](#step7-加入函数组件渲染支持)
+- [step8: 实现`useState` hook](#step8-实现usestate-hook)
 - [后记](#后记)
-
-<!-- /TOC -->
 
 ## 文章内容
 
@@ -100,7 +96,9 @@ function Foo() {
 
 
 
-## [step0: 准备工作](https://github.com/wcly/my-react2/tree/main)
+## step0: 准备工作
+
+[源码](https://github.com/wcly/my-react2/tree/main)
 
 **现在，让我们开始开发一个`React`**
 
@@ -162,7 +160,9 @@ container.appendChild(node)
 
 
 
-## [step1: 实现`createElement`函数](https://github.com/wcly/my-react2/tree/step1)
+## step1: 实现`createElement`函数
+
+[源码](https://github.com/wcly/my-react2/tree/step1)
 
 实现`createElement的`代码
 
@@ -254,7 +254,9 @@ container.appendChild(node)
 
 
 
-## [step2: 实现`render`函数](https://github.com/wcly/my-react2/tree/step2)
+## step2: 实现`render`函数
+
+[源码](https://github.com/wcly/my-react2/tree/step2)
 
 下面，我们将原来的渲染函数抽出来，加以改造
 
@@ -318,7 +320,9 @@ export default ReactDOM
 
 
 
-## [step3: 并发模式](https://github.com/wcly/my-react2/tree/step3)
+## step3: 并发模式
+
+[源码](https://github.com/wcly/my-react2/tree/step3)
 
 按找上面的渲染方式，当需要渲染的元素多的时候，在一帧（16.6ms）内无法渲染完毕就会造成浏览器的卡顿。
 
@@ -359,7 +363,9 @@ function performUnitOfWork(nextUnitOfWork){
 
 
 
-## [step4: 加入Fibers](https://github.com/wcly/my-react2/tree/step4)
+## step4: 加入Fibers
+
+[源码]((https://github.com/wcly/my-react2/tree/step4))
 
 为组织拆分成多个单元的任务，需要一种数据结构，React在这里使用一种叫**Fiber**的数据结构，React给每一个节点分配一个fiber节点，形成fiber树，可以理解为虚拟dom。
 
@@ -538,7 +544,9 @@ function createDom(fiber) {
 
 
 
-## [step5: 渲染和提交](https://github.com/wcly/my-react2/tree/step5)
+## step5: 渲染和提交
+
+[源码]((https://github.com/wcly/my-react2/tree/step5))
 
 上面的代码有一个问题:bug:，每次生成一个fiber结点的时候就马上渲染到页面上，但是浏览器可能会在途中打断这个操作，用户就会看到不完整的页面。
 
@@ -696,7 +704,9 @@ export default ReactDOM
 
 
 
-## [step6: 加入协调算法](https://github.com/wcly/my-react2/tree/step6)
+## step6: 加入协调算法
+
+[源码]((https://github.com/wcly/my-react2/tree/step6))
 
 到目前为止，我们只完成了页面的元素的添加工作，还有更新和删除工作没有做。在React中，这一步称之为**协调**，可以理解为虚拟DOM的diff算法。
 
@@ -1019,7 +1029,9 @@ export default ReactDOM
 
 
 
-## [step7: 加入函数组件渲染支持](https://github.com/wcly/my-react2/tree/step7)
+## step7: 加入函数组件渲染支持
+
+[源码]((https://github.com/wcly/my-react2/tree/step7))
 
 下面，我们要加入函数组件的渲染支持。
 
@@ -1361,9 +1373,11 @@ export default ReactDOM
 
 
 
-## [step8: 实现`useState`hook](https://github.com/wcly/my-react2/tree/step8)
+## step8: 实现`useState` hook
 
-为了体现hook，再改一下我们的例子，加入useState:
+[源码]((https://github.com/wcly/my-react2/tree/step8))
+
+为体现hook功能，再改一下我们的例子，加入useState:
 
 ```js
 // src\index.js
