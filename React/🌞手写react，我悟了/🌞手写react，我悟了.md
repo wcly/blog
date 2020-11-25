@@ -1,6 +1,21 @@
-# 🌞手写React，我悟了
+<!-- TOC -->
 
-**文章内容**
+- [文章内容](#文章内容)
+- [初始化项目](#初始化项目)
+- [[step0: 准备工作](https://github.com/wcly/my-react2/tree/main)](#step0-准备工作httpsgithubcomwclymy-react2treemain)
+- [[step1: 实现`createElement`函数](https://github.com/wcly/my-react2/tree/step1)](#step1-实现createelement函数httpsgithubcomwclymy-react2treestep1)
+- [[step2: 实现`render`函数](https://github.com/wcly/my-react2/tree/step2)](#step2-实现render函数httpsgithubcomwclymy-react2treestep2)
+- [[step3: 并发模式](https://github.com/wcly/my-react2/tree/step3)](#step3-并发模式httpsgithubcomwclymy-react2treestep3)
+- [[step4: 加入Fibers](https://github.com/wcly/my-react2/tree/step4)](#step4-加入fibershttpsgithubcomwclymy-react2treestep4)
+- [[step5: 渲染和提交](https://github.com/wcly/my-react2/tree/step5)](#step5-渲染和提交httpsgithubcomwclymy-react2treestep5)
+- [[step6: 加入协调算法](https://github.com/wcly/my-react2/tree/step6)](#step6-加入协调算法httpsgithubcomwclymy-react2treestep6)
+- [[step7: 加入函数组件渲染支持](https://github.com/wcly/my-react2/tree/step7)](#step7-加入函数组件渲染支持httpsgithubcomwclymy-react2treestep7)
+- [[step8: 实现`useState`hook](https://github.com/wcly/my-react2/tree/step8)](#step8-实现usestatehookhttpsgithubcomwclymy-react2treestep8)
+- [后记](#后记)
+
+<!-- /TOC -->
+
+## 文章内容
 
 仿照源码实现react的初始化渲染和更新功能
 
@@ -8,23 +23,23 @@
 
 **步骤**
 
-- [step0: 准备工作](#step0: 准备工作)
+- step0: 准备工作
 
-- [step1: 实现`createElement`函数](#step1: 实现`createElement`函数)
+- step1: 实现`createElement`函数
 
-- [step2: 实现`render`函数](#step2: 实现`render`函数)
+- step2: 实现`render`函数
 
-- [step3: 并发模式](#step3: 并发模式)
+- step3: 并发模式
 
-- [step4: 加入Fibers](#step4: 加入Fibers)
+- step4: 加入Fibers
 
-- [step5: 渲染和提交](#step5: 渲染和提交)
+- step5: 渲染和提交
 
-- [step6: 加入协调算法](#step6: 加入协调算法)
+- step6: 加入协调算法
 
-- [step7: 加入函数组件渲染支持](#step7: 加入函数组件渲染支持)
+- step7: 加入函数组件渲染支持
 
-- [step8: 实现`useState`hook](#step8: 实现`useState`hook)
+- step8: 实现`useState`hook
 
 源码地址：https://github.com/wcly/my-react2
 
