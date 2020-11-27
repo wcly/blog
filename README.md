@@ -11,7 +11,7 @@
 - React
     - [React生命周期和setState异步执行问题](https://github.com/wcly/blog/blob/master/React/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8CsetState%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8CsetState%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98.md)
     - [React之Hook快速入门](https://github.com/wcly/blog/blob/master/React/React%E4%B9%8BHook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/React%E4%B9%8BHook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md)
-    - [手写React，我悟了](https://github.com/wcly/blog/blob/master/React/%F0%9F%8C%9E%E6%89%8B%E5%86%99react%EF%BC%8C%E6%88%91%E6%82%9F%E4%BA%86/%F0%9F%8C%9E%E6%89%8B%E5%86%99react%EF%BC%8C%E6%88%91%E6%82%9F%E4%BA%86.md)
+    - [手写React，我悟了](https://github.com/wcly/blog/edit/master/React/%E6%89%8B%E5%86%99React%EF%BC%8C%E6%88%91%E6%82%9F%E4%BA%86/%E6%89%8B%E5%86%99React%EF%BC%8C%E6%88%91%E6%82%9F%E4%BA%86.md)
 - JavaScript基础
     - [JavaScript核心之事件循环](https://github.com/wcly/blog/blob/master/JavaScript%E5%9F%BA%E7%A1%80/JavaScript%E6%A0%B8%E5%BF%83%E4%B9%8B%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.md)
     - [JavaScript核心之原型链](https://github.com/wcly/blog/blob/master/JavaScript%E5%9F%BA%E7%A1%80/JavaScript%E6%A0%B8%E5%BF%83%E4%B9%8B%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
