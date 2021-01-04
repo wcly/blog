@@ -1482,6 +1482,7 @@ export function useState(initial) {
 - 我们在提交阶段也遍历整颗树，React则使用一个链表，只保留和访问有变动的fiber结点
 - 我们每次在创建fiber树的时候，都会为每个fiber结点创建一个新的对象，React会从之前的fiber树中回收再利用
 - 我们每次更新的时候都会丢弃当前正在工作的树，重新从根节点开始遍历，React会使用过期时间戳标记每次更新，然后使用它来决定哪个更新有更高的优先级
+- 我们为实现浏览器并发模式，使用[requestIdleCallback](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback)API，但是该API的兼容性和稳定性并不好，React使用一套更完善机制代替，被称为调度器（Scheduler）
 - 等等...
 
 
