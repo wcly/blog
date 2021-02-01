@@ -43,7 +43,7 @@ npx react-native init ProjectName --template react-native-template-typescript --
 
 （可选）修改一下ProjectName文件加的名称为template，这样看起来直观点，修改完成后的目录结构如下：
 
-<img src="/Users/weixiaolin/learn/blog/react-native/手把手教你创建一个自定义react-native项目模板/images/directory.png" alt="image-20210122141014144" style="zoom: 67%;" />
+![目录结构](./images/directory.png)
 
 
 
@@ -75,7 +75,7 @@ module.exports = {
 
 完成后的目录结构：
 
-<img src="/Users/weixiaolin/learn/blog/react-native/手把手教你创建一个自定义react-native项目模板/images/directory1.png" alt="image-20210122142702868" style="zoom:67%;" />
+![目录结构](./images/directory1.png)
 
 
 
@@ -97,11 +97,23 @@ npx react-native init test_custom_template --template your/path/to/template
 
 测试结果，成功:grin:
 
-![image-20210122144056769](./images/result.png)
+![测试图片](./images/result.png)
 
 
 
+> 参考：https://github.com/react-native-community/cli/blob/master/docs/init.md
 
 
 
+## 后记
 
+我在github上建立一个模板，[点击进入](https://github.com/wcly/react-native-better-template)
+
+目前已有功能：
+
+- 支持typescript
+- 加入react-navigation5
+- 加入一些常用的库
+- 后续还会加入axios、dva等。。。
+
+目标可以做成一个开箱即用的react-native模板，欢迎关注，提PR。
