@@ -107,7 +107,7 @@ npx react-native init test_custom_template --template your/path/to/template
 
 ## 后记
 
-我在github上建立一个模板，[点击进入](https://github.com/wcly/react-native-better-template)
+我在github上建立了一个模板，扩展了react-native官方脚手架创建的模板，[点击进入](https://github.com/wcly/react-native-better-template)
 
 目前已有功能：
 
@@ -116,4 +116,4 @@ npx react-native init test_custom_template --template your/path/to/template
 - 加入一些常用的库
 - 后续还会加入axios、dva等。。。
 
-目标可以做成一个开箱即用的react-native模板，欢迎关注，提PR。
+目标可以做成一个开箱即用的react-native模板，欢迎Start。
