@@ -8,6 +8,7 @@
 - leetcode
     - [leetcode初级算法(字符串篇)](https://github.com/wcly/blog/blob/master/leetcode/leetcode%E5%88%9D%E7%BA%A7%E7%AE%97%E6%B3%95(%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AF%87).md)
     - [leetcode初级算法(数组篇)](https://github.com/wcly/blog/blob/master/leetcode/leetcode%E5%88%9D%E7%BA%A7%E7%AE%97%E6%B3%95(%E6%95%B0%E7%BB%84%E7%AF%87).md)
+    - [leetcode初级算法(链表篇)](https://github.com/wcly/blog/blob/master/leetcode/leetcode%E5%88%9D%E7%BA%A7%E7%AE%97%E6%B3%95(%E9%93%BE%E8%A1%A8%E7%AF%87).md)
 - React
     - [React生命周期和setState异步执行问题](https://github.com/wcly/blog/blob/master/React/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8CsetState%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8CsetState%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98.md)
     - [React之Hook快速入门](https://github.com/wcly/blog/blob/master/React/React%E4%B9%8BHook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/React%E4%B9%8BHook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md)
