@@ -304,7 +304,7 @@ var levelOrder = function (root) {
 
 
 
-[将有序数组转换为二叉搜索树](https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xninbt/)
+### [将有序数组转换为二叉搜索树](https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xninbt/)
 
 解析： 使用递归，将数组对半切，中间的是根节点，左边数组的中间是左节点，右边数组的中间是右节点。
 
