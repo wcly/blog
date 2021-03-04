@@ -79,15 +79,15 @@ fastlane init
 
 接着fastlane会需要你输入选择相关配置：
 
-![image-20210303152517151](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303152517151.png)
+![image-20210303152517151](./images/image-20210303152517151.png)
 
 选择2
 
-![image-20210303152652043](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303152652043.png)
+![image-20210303152652043](./images/image-20210303152652043.png)
 
 选择不含tvOS的那个，即2
 
-![image-20210303153134020](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303153134020.png)
+![image-20210303153134020](./images/image-20210303153134020.png)
 
 输入你开发使用的Apple ID，第一次配置还会需要密码等信息，按照提示填写即可
 
@@ -231,7 +231,7 @@ end
 fastlane add_plugin pgyer
 ~~~
 
-![image-20210303170218503](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303170218503.png)
+![image-20210303170218503](./images/image-20210303170218503.png)
 
 输入y
 
@@ -239,7 +239,7 @@ fastlane add_plugin pgyer
 
 查看蒲公英的API Key和User Key，替换配置文件中的内容
 
-![image-20210303164307124](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303164307124.png)
+![image-20210303164307124](./images/image-20210303164307124.png)
 
 
 
@@ -300,7 +300,7 @@ action就是fastlane 运行时，要执行的动作。例如：前面FastFile中
 faslane new_action
 ```
 
-![image-20210303171426483](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303171426483.png)
+![image-20210303171426483](./images/image-20210303171426483.png)
 
 输入你的action名称，命名规则：小驼峰或下划线连接
 
@@ -466,7 +466,7 @@ fastlane testHelloAction
 
 结果
 
-![image-20210303174501946](/Users/weixiaolin/Library/Application Support/typora-user-images/image-20210303174501946.png)
+![image-20210303174501946](./images/image-20210303174501946.png)
 
 成功运行:happy:
 
