@@ -468,7 +468,7 @@ fastlane testHelloAction
 
 ![image-20210303174501946](./images/image-20210303174501946.png)
 
-成功运行:happy:
+成功运行！
 
 
 
