@@ -233,6 +233,40 @@ npm run postinstall
 
 
 
+### 修复第三方库的间接依赖
+
+每个第三方库都会或多或少的依赖其它的库，在遇到间接依赖出现bug的时候，我们只能通过升级这些间接依赖来解决。
+
+如何强制使用某个版本的间接依赖，可以通过修改`package.json`来达到目的：
+
+举个例子：
+
+**yarn**
+
+以修改metro为例，现在在`yarn.lock`文件看到的metro库的版本是`0.58.0`
+
+![image-20210312090310556](https://i.loli.net/2021/03/12/9e2xnbBUCmlDqN6.png)
+
+修改`package.json`，添加`resoultions`字段，你可以指定某个库的简介依赖，如：`d2/left-pad`
+
+如果你不知道那个库依赖了metro可以使用`**/metro`，替换所有库的metro依赖
+
+```diff
++"resolutions": {
++  "**/metro": "0.65.2"
++}
+```
+
+然后重新安装依赖，再查看`yarn.lock`，我们会发现已经生效
+
+![image-20210312091205054](https://i.loli.net/2021/03/12/LxBmAyWlkZeFG32.png)
+
+**npm**
+
+npm默认不支持该功能，需要借助一个第三方库：[npm-force-resolutions](https://www.npmjs.com/package/npm-force-resolutions)，配置方式也差不多，这里就不做过多说明了。
+
+
+
 ## webview调试技巧
 
 在react-native中使用使用[react-native-webview](https://github.com/react-native-webview/react-native-webview)库进行webview的编写。
