@@ -18,7 +18,7 @@ global.XMLHttpRequest = global.originalXMLHttpRequest || global.XMLHttpRequest;
 
 ### flipper
 
-0.62以上版本的react-native内置调试工具，内置很多插件，功能比react-natev-debugger，使用的时候无需开启debug模式
+0.62以上版本的react-native内置调试工具，内置很多插件，功能比react-native-debugger，使用的时候无需开启debug模式
 
 在官网[下载](https://fbflipper.com/)安装即可
 
@@ -139,7 +139,7 @@ npm install react-native@0.64-rc.3
 
 ### 使用`patch-package`打补丁
 
-下面我们来使用[pathc-package](https://www.npmjs.com/package/patch-package)给第三方库打补丁。
+下面我们来使用[patch-package](https://www.npmjs.com/package/patch-package)给第三方库打补丁。
 
 #### 安装
 
@@ -247,7 +247,7 @@ npm run postinstall
 
 ![image-20210312090310556](https://i.loli.net/2021/03/12/9e2xnbBUCmlDqN6.png)
 
-修改`package.json`，添加`resoultions`字段，你可以指定某个库的简介依赖，如：`d2/left-pad`
+修改`package.json`，添加`resolutions`字段，你可以指定某个库的简介依赖，如：`d2/left-pad`
 
 如果你不知道那个库依赖了metro可以使用`**/metro`，替换所有库的metro依赖
 
