@@ -358,3 +358,85 @@ obj.bar.baz = 1;
 console.log(obj, obj1);
 ```
 
+
+
+### 函数柯里化
+
+在数学和计算机科学中，柯里化是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。
+
+例子：
+
+~~~js
+function add(a, b){
+  return a + b;
+}
+
+add(1, 2); // 普通调用
+
+// 将函数柯里化
+var curryAdd = curry(add);
+curryAdd(1)(2); // 3
+~~~
+
+作用：
+
+1. 参数复用
+2. 延迟执行
+
+代码：
+
+- 传入一个函数，返回柯里化之后的函数
+- 拼接参数，直到参数长度与原函数参数长度一致才执行，否则继续返回一个函数
+
+```js
+ function curry(fn, args) {
+   var length = fn.length; // 获取原函数的参数列表长度
+   args = args || []; // 获取当前传入的参数
+
+   return function () {
+     var _args = args.slice(0); // 复制一份当前传入的参数
+     // 拼接传入参数
+     for (var i = 0; i < arguments.length; i++) {
+       _args.push(arguments[i]);
+     }
+     
+     if (_args.length < length) { // 如果参数小于定义函数参数的长度，继续调用
+       return curry.call(this, fn, _args);
+     } else {
+       return fn.apply(this, _args); // 如果参数等于定义函数参数的长度，执行
+     }
+   };
+ }
+```
+
+
+
+### 函数组合
+
+接收若干个函数作为参数，返回一个新函数。新函数执行时，按照`由右向左`的顺序依次执行传入`compose`中的函数，每个函数的执行结果作为为下一个函数的输入，直至最后一个函数的输出作为最终的输出结果。
+
+例子：
+
+```js
+const n = '3.14';
+
+const func = compose(Math.round, parseFloat);
+func(n); // 4，先执行parseFloat再执行round
+```
+
+代码：
+
+```js
+const compose = (...funcs) => (...args) => funcs.reduceRight((a, b) => a(b(args)));
+```
+
+
+
+**从左至右处理数据流的过程称之为管道(pipeline)**
+
+代码：
+
+```js
+const pipe = (...funcs) => (...args) => funcs.reduce((a, b) => a(b(args)));
+```
+
