@@ -427,7 +427,7 @@ func(n); // 4，先执行parseFloat再执行round
 代码：
 
 ```js
-const compose = (...funcs) => (...args) => funcs.reduceRight((a, b) => a(b(args)));
+const compose = (...funcs) => (...args) => funcs.reduceRight((a, b) => a(b(...args)));
 ```
 
 
@@ -437,6 +437,176 @@ const compose = (...funcs) => (...args) => funcs.reduceRight((a, b) => a(b(args)
 代码：
 
 ```js
-const pipe = (...funcs) => (...args) => funcs.reduce((a, b) => a(b(args)));
+const pipe = (...funcs) => (...args) => funcs.reduce((a, b) => a(b(...args)));
+```
+
+
+
+### Promise
+
+```js
+function Promise(executor) {
+  var self = this;
+  self.status = "pending"; // Promise的状态
+  self.data = undefined; // Promise的值
+  self.onResolvedCallbacks = []; // resolve回调的函数集合
+  self.onRejectedCallbacks = []; // reject回调的函数集合
+
+  function resolve(value) {
+    if (self.status === "pending") {
+      self.status = "resolved";
+      self.data = value;
+      for (var i = 0; i < self.onResolvedCallbacks.length; i++) {
+        self.onResolvedCallbacks[i](value);
+      }
+    }
+  }
+
+  function reject(reason) {
+    if (self.status === "pending") {
+      self.status = "rejected";
+      self.data = value;
+      for (var i = 0; i < self.onRejectedCallbacks; i++) {
+        self.onRejectedCallbacks[i](value);
+      }
+    }
+  }
+
+  try {
+    executor(resolve.bind(this), reject.bind(this));
+  } catch (e) {
+    reject(e);
+  }
+}
+
+Promise.prototype.then = function (onResolved, onRejected) {
+  var self = this;
+  var promise2;
+
+  // 做一下兼容处理
+  onResolved =
+    typeof onResolved === "function"
+    ? onResolved
+  : function (value) {
+    return value;
+  };
+  onRejected =
+    typeof onRejected === "function"
+    ? onRejected
+  : function (reason) {
+    throw reason;
+  };
+
+  if (self.status === "resolved") {
+    return (promise2 = new Promise(function (resolve, reject) {
+      try {
+        var x = onResolved(self.data);
+        if (x instanceof Promise) {
+          // 如果onResolved返回Promise，执行then方法
+          x.then(resolve, reject);
+        }
+        resolve(x); // 不然就直接触发resolve
+      } catch (e) {
+        reject(e);
+      }
+    }));
+  }
+
+  if (self.status === "rejected") {
+    return (promise2 = new Promise(function (resolve, reject) {
+      try {
+        var x = onRejected(self.data);
+        if (x instanceof Promise) {
+          x.then(resolve, reject);
+        }
+      } catch (e) {
+        reject(e);
+      }
+    }));
+  }
+
+  if (self.status === "pending") {
+    return (promise2 = new Promise(function (resolve, reject) {
+      self.onResolvedCallbacks.push(function (value) {
+        try {
+          var x = onResolved(self.data);
+          if (x instanceof Promise) {
+            x.then(resolve, reject);
+          }
+        } catch (e) {
+          reject(e);
+        }
+      });
+    }));
+  }
+};
+
+Promise.prototype.catch = function (onRejected) {
+  return this.then(null, onRejected);
+};
+
+// 测试
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("resolve");
+    resolve("abc");
+  }, 1000);
+});
+
+promise.then((res) => {
+  console.log(res);
+});
+```
+
+
+
+### promisify
+
+将错误优先回到转换成promise的格式
+
+使用
+
+```js
+// 使用前
+fs.readFile('./index.js', (err, data) => {
+   if(!err) {
+       console.log(data.toString())
+   }
+   console.log(err)
+})
+// 使用promisify后
+const readFile = promisify(fs.readFile)
+readFile('./index.js')
+   .then(data => {
+       console.log(data.toString())
+   })
+   .catch(err => {
+       console.log('error:', err)
+   })
+```
+
+代码：
+
+```js
+// const newFn = promisify(fn)
+// newFn(a) 会执行Promise参数方法
+function promisify(fn) {
+  return function(...args) {
+    // 返回promise的实例
+    return new Promise(function(reslove, reject) {
+      // newFn(a) 时会执行到这里向下执行
+      // 加入参数cb => newFn(a)
+      args.push(function(err, data) {
+        if (err) {
+          reject(err)
+        } else {
+          reslove(data)
+        }
+      })
+      // 这里才是函数真正执行的地方执行newFn(a, cb)
+      fn.apply(null, args)
+    })
+  }
+}
 ```
 
