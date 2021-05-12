@@ -26,5 +26,6 @@
     - [手把手教你创建一个自定义react-native项目模板](https://github.com/wcly/blog/blob/master/react-native/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89react-native%E9%A1%B9%E7%9B%AE%E6%A8%A1%E6%9D%BF/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89react-native%E9%A1%B9%E7%9B%AE%E6%A8%A1%E6%9D%BF.md)
     - [使用fastlane实现react-native项目一键打包部署](https://github.com/wcly/blog/blob/master/react-native/%E4%BD%BF%E7%94%A8fastlane%E5%AE%9E%E7%8E%B0react-native%E9%A1%B9%E7%9B%AE%E4%B8%80%E9%94%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8fastlane%E5%AE%9E%E7%8E%B0react-native%E9%A1%B9%E7%9B%AE%E4%B8%80%E9%94%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2.md)
     - [react-native开发技巧](https://github.com/wcly/blog/blob/master/react-native/react-native%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7.md)
+    - [react-native实现国际化](https://github.com/wcly/blog/blob/master/react-native/react-native%E5%AE%9E%E7%8E%B0%E5%9B%BD%E9%99%85%E5%8C%96.md)
 - 原理
     - [老生常谈，垃圾回收](https://github.com/wcly/blog/blob/master/%E5%8E%9F%E7%90%86/%E8%80%81%E7%94%9F%E5%B8%B8%E8%B0%88%EF%BC%8C%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.md)
