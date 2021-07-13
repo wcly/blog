@@ -1,6 +1,6 @@
 ## [leetcode初级算法(字符串篇)](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/strings/)
 
-注：**点标题可以查看对应的题目**，本文代码均使用`Javascript`编写。代码不一定是最优解，仅供参考，如仁兄有更好的实现，欢迎交流。
+注：**点标题可以查看对应的题目**，本文代码均使用`Javascript`编写。代码不一定是最优解，仅供参考，如大佬们有更好的实现，欢迎交流。
 
 ### [反转字符串](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/strings/32/)
 
