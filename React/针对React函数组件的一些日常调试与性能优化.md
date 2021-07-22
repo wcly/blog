@@ -128,13 +128,17 @@ export default TodoItem;
 
 ![image-20210716171348531](https://i.loli.net/2021/07/16/zeDAfEVc2J8FoHn.png)
 
+[完整代码](https://gitee.com/wcly/react-optimize-practice/tree/base/)
+
 ### React Developer Tools
+
+#### 安装
 
 这里我们先来介绍一款用来调试`React`项目的Chrome插件，下载地址：[React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
 需要翻墙，如果翻不了墙的话，用新版的Edge也行：[Microsoft Edge 加载项 - react developer tools](https://microsoftedge.microsoft.com/addons/search/react developer tools?hl=zh-CN)
 
----
+#### 使用
 
 现在我们使用`React Developer Tools`查看渲染时间和次数。
 
@@ -242,6 +246,8 @@ Why？？？
 
 > 原因就是，虽然这里确实通过`useCallback`保证`handleAddItem`的引用不变，但是`TodoInput`并没有根据这个比较需不需要重新渲染，这个时候就需要使用React提供的`memo`函数
 
+[完整代码](https://gitee.com/wcly/react-optimize-practice/tree/useCallback/)
+
 ### React.memo
 
 [想看React.memo官方文档解释戳我](https://zh-hans.reactjs.org/docs/react-api.html#reactmemo)
@@ -283,6 +289,8 @@ export default memo(TodoInput);
 2. `memo`用在子组件，`useCallbak`用在父组件，不要搞混了。
 
 > React还提供了[useMemo](https://zh-hans.reactjs.org/docs/hooks-reference.html#usememo)对其它类型的数据进行缓存，用法和`useCallback`一致，但是可以返回任何值，`useCallback`只能返回函数，是`useMemo`的子集。
+
+[完整代码](https://gitee.com/wcly/react-optimize-practice/tree/React.memo/)
 
 ### why-did-you-render
 
@@ -333,7 +341,7 @@ ReactDOM.render(
 );
 ```
 
-#### 开始调试
+#### 调试
 
 进行一样的步骤，输入一个字符然后点击添加按钮，打开控制台，发现了一个错误
 
@@ -456,6 +464,8 @@ export default memo(TodoInput);
 ![image-20210719183104177](https://i.loli.net/2021/07/19/glpQys6oWEwXPVO.png)
 
 这里可以很清楚的看到什么组件因为什么原因触发了重新渲染。
+
+[完整代码](https://gitee.com/wcly/react-optimize-practice/tree/why-did-you-render/)
 
 ### 函数组件使用React-Redux的坑
 
@@ -783,6 +793,8 @@ const { todoList, usename } = useMemo(() => {
 }, [state])
 ```
 
+[完整代码](https://gitee.com/wcly/react-optimize-practice/tree/react-redux/)
+
 ## 总结
 
 1. React有两个常用的工具，分别是`React Developer Tools`和`why-did-you-render`，优化可以从减少渲染次数和渲染时间下手；
@@ -790,3 +802,12 @@ const { todoList, usename } = useMemo(() => {
 3. `react-redux`的`useSeletor`使用不当容易造成重复渲染，有四种方式可以解决。
 
 其实这些性能优化的点，都是在一开始写代码的时候就可以避免的，写多两次就熟了。很多人觉得`React`的学习成本高，可能就是因为不熟悉`React`的渲染机制。在`vue`中，这些优化框架已经做好了，但是`React`中需要自己写。
+
+
+
+>参考：
+>
+>- https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/
+>- https://react-redux.js.org/api/hooks#performance
+>- https://zh-hans.reactjs.org/docs/hooks-faq.html
+>- https://github.com/welldone-software/why-did-you-render
