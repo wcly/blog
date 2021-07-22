@@ -461,7 +461,7 @@ export default memo(TodoInput);
 
 然后重新操作一遍，然后就可以看到控制台的输出了
 
-![image-20210719183104177](https://i.loli.net/2021/07/19/glpQys6oWEwXPVO.png)
+![image-20210722093755356](https://i.loli.net/2021/07/22/3L1fg64CkYwzKGx.png)
 
 这里可以很清楚的看到什么组件因为什么原因触发了重新渲染。
 
@@ -657,7 +657,7 @@ dispatch({
 
 现在这种写法还没什么问题暴露出来，控制台啥也没打印。
 
-![image-20210720140745456](https://i.loli.net/2021/07/20/q3dgronuCPMbA8T.png)
+![image-20210722094013241](https://i.loli.net/2021/07/22/yhi4KQj78fM6Rm3.png)
 
 但是如果`useAppSelector`换一种写法，就不一样了
 
@@ -687,7 +687,7 @@ export default TodoList;
 
 现在我们刷新页面，看看控制台。
 
-![image-20210720141611834](https://i.loli.net/2021/07/20/Gn3NcM8xYlH49PR.png)
+![image-20210722094055045](https://i.loli.net/2021/07/22/i8ycPmVHIj54ZN7.png)
 
 
 
@@ -724,7 +724,7 @@ if (process.env.NODE_ENV === "development") {
 
 现在再来看看控制台，看起来数据并没有变化，却触发了两次渲染
 
-![image-20210721194855238](https://i.loli.net/2021/07/21/FVcMSB3nCZK7foz.png)
+![image-20210722094233010](https://i.loli.net/2021/07/22/lCb5Tp1mdXnSJ4I.png)
 
 这是因为，`useSelector`返回数据的时候是使用`===`进行比较的，如果你返回的对象，则每次比较都是`false`，所以会触发多次渲染
 
