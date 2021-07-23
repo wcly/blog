@@ -9,7 +9,7 @@
 
 **其实就是把将删除结点替换成删除结点后面的节点**。
 
-![image-20210104182057242](./images/delete-linked-list-node.png)
+![image-20210104182057242](https://i.loli.net/2021/07/23/RJfIz2Oo95QsdvX.png)
 
 步骤：
 
@@ -116,7 +116,7 @@ var removeNthFromEnd = function (head, n) {
 
 
 
-![image-20210114143555860](./images/reverse-link-list.png)
+![image-20210114143555860](https://i.loli.net/2021/07/23/rpRdVkOyxlK8qLb.png)
 
 步骤：
 
@@ -164,7 +164,7 @@ var reverseList = function(head) {
 
 解析：使用递归一直遍历链表到最后，记录最后一个值作为头指针，返回。当前层的heade.next.next等于head，即当前节点的后一个结点指向当前结点，然后head.next等于null，防止回环。
 
-![image-20210114183657148](./images/reverse-link-list-recursive.png)
+![image-20210114183657148](https://i.loli.net/2021/07/23/YT9vuKqDlwR5bVI.png)
 
 步骤：
 
@@ -207,9 +207,7 @@ var reverseList = function(head) {
 
 解析：用一个循环一直遍历到其中一个链表为空，比较过程中，看两个链表当前节点哪个值小，值小的串起来，大的留着下一次循环比较，最后剩下的不为空的拼接在链表最后面。
 
-![image-20210201150806648](/Users/weixiaolin/learn/blog/leetcode/images/merge-two-list.png)
-
-
+![image-20210201150806648](https://i.loli.net/2021/07/23/3DfyU7orAHxWZL1.png)
 
 思路：
 
