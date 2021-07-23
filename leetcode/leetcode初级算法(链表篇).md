@@ -276,11 +276,49 @@ var mergeTwoLists = function (l1, l2) {
 
 
 
+#### 伪头结点
+
+解析：简化版循环
+
+代码：
+
+```typescript
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */
+
+function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+    const dum = new ListNode();
+    let cur = dum;
+    while (l1 !== null && l2 !== null) {
+        if (l1.val > l2.val) {
+            cur.next = l2;
+            l2 = l2.next;
+        } else {
+            cur.next = l1;
+            l1 = l1.next;
+        }
+        cur = cur.next;
+    }
+    cur.next = l1 ? l1 : l2;
+
+    return dum.next;
+};
+```
+
+
+
 #### 递归
 
-解析：递归的没一步都连接一个结点，连接小的那一个，在继续比较后续没有比较过的节点。
-
-
+解析：递归的每一步都连接一个结点，连接小的那一个，在继续比较后续没有比较过的节点。
 
 步骤：
 
