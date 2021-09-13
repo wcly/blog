@@ -15,6 +15,7 @@
     - [1663.具有给定数值的最小字符串](https://github.com/wcly/blog/blob/master/leetcode/1663.%E5%85%B7%E6%9C%89%E7%BB%99%E5%AE%9A%E6%95%B0%E5%80%BC%E7%9A%84%E6%9C%80%E5%B0%8F%E5%AD%97%E7%AC%A6%E4%B8%B2.md)
     - [208.实现Trie(前缀树)](https://github.com/wcly/blog/blob/master/leetcode/208.%E5%AE%9E%E7%8E%B0%20Trie%20(%E5%89%8D%E7%BC%80%E6%A0%91).md)
     - [821.字符的最短距离](https://github.com/wcly/blog/blob/master/leetcode/821.%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB.md)
+    - [146.LRU 缓存机制](https://github.com/wcly/blog/blob/master/leetcode/146.LRU%20%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6.md)
 - React
     - [React生命周期和setState异步执行问题](https://github.com/wcly/blog/blob/master/React/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8CsetState%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8CsetState%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98.md)
     - [React之Hook快速入门](https://github.com/wcly/blog/blob/master/React/React%E4%B9%8BHook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/React%E4%B9%8BHook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md)
