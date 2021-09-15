@@ -119,7 +119,7 @@ console.log(cloneDeep(obj));
 
 ![image-20210914161032485](https://i.loli.net/2021/09/14/FMRqoKpCBvT1Ytd.png)
 
-**代码地址：**https://codesandbox.io/s/deepclone-egjwg?file=/src/cloneDeep1.js
+**代码地址：** https://codesandbox.io/s/deepclone-egjwg?file=/src/cloneDeep1.js
 
 > 一个简易版的深克隆实现了，但估计面试官看到这里，内心应该毫无波澜，甚至有点想说：
 
@@ -539,6 +539,8 @@ console.log(cloneDeep(obj));
 
 ![image-20210914162451144](https://i.loli.net/2021/09/14/eT6Vj5tHwvogc2u.png)
 
+**代码地址：** https://codesandbox.io/s/deepclone-egjwg?file=/src/cloneDeep3.js
+
 > 到这里，估计面试官已经认可你的能力了，这一关你算是过去了哈。
 
 ![](http://wx2.sinaimg.cn/large/006APoFYly1g7y1qb9o0hg308c08ct9g.gif)
@@ -738,7 +740,7 @@ console.log(cloneDeep(obj));
 
 ![image-20210915085624212](https://i.loli.net/2021/09/15/uUpODqzY4kATvfI.png)
 
-**代码地址：**https://codesandbox.io/s/deepclone-egjwg?file=/src/cloneDeep4.js:3981-4478
+**代码地址：** https://codesandbox.io/s/deepclone-egjwg?file=/src/cloneDeep4.js:3981-4478
 
 > 面试官：漂亮！JavaScript功底扎实，注重细节处理，还考虑到了性能问题，看来平时没少积累，确认过眼神，是我要的人，明天过来上班吧！
 
