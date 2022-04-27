@@ -1,4 +1,7 @@
 # 个人博客
+
+> 后续文章将不在放在源码中，请在[Discussions](https://github.com/wcly/blog/discussions)中查看。
+
 目录：
 
 - 网络知识
